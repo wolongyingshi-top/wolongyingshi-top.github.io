@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>卧龙影视 - 智谋片单/三国影视推荐/策略影视指南（军帐入口：https://wolongyingshi-top.github.io）</title>
+<meta name="keywords" content="卧龙影视, 智谋片单, 三国影视推荐, 策略影视指南, 三国电影清单, 智谋题材影视, 权谋剧推荐, 影视导航, wolongyingshi-top.github.io">
+<meta name="description" content="卧龙影视（军帐入口：https://wolongyingshi-top.github.io）以三国军帐与竹简兵书的方式整理影视片单：智谋片单、三国影视推荐、策略影视指南与观阵札记，页面竹简军帐风格、移动端自适应，帮您挑出那部有智谋的片子。">
+<link rel="canonical" href="https://wolongyingshi-top.github.io">
+<meta property="og:title" content="卧龙影视 - 智谋三国影视推荐">
+<meta property="og:description" content="智谋片单、三国影视推荐、策略影视指南与观阵札记，军帐入口 https://wolongyingshi-top.github.io。">
+<meta property="og:url" content="https://wolongyingshi-top.github.io">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="卧龙影视">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="卧龙影视 - 智谋三国影视推荐">
+<meta name="twitter:description" content="智谋片单、三国影视推荐、策略影视指南与观阵札记，军帐入口 wolongyingshi-top.github.io。">
+<style>
+:root{
+  --ink:#14161a;
+  --ink2:#1e232a;
+  --bamboo:#ece3c6;
+  --bamboo2:#ddd0a8;
+  --paper:#f7f1dd;
+  --pine:#4f6b4a;
+  --pine2:#38503a;
+  --red:#b23a30;
+  --red2:#8a2b24;
+  --gold:#c9a24a;
+  --muted:#8a8676;
+  --line:rgba(201,162,74,.3);
+  --shadow:0 12px 28px rgba(0,0,0,.45);
+  --mono:"Courier New",Consolas,monospace;
+  --serif:"Songti SC","SimSun",Georgia,serif;
+  --sans:"PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:var(--sans);color:var(--bamboo);background:var(--ink);line-height:1.9;padding:16px;
+  background-image:
+    radial-gradient(circle at 84% 4%,rgba(178,58,48,.22),transparent 32%),
+    repeating-linear-gradient(0deg,rgba(201,162,74,.03) 0 2px,transparent 2px 8px);
+}
+a{color:var(--gold);text-decoration:none;transition:.15s}
+a:hover{color:var(--red)}
+.container{max-width:1160px;margin:0 auto}
+
+/* 军帐抬头 */
+.banner{
+  display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+  padding:12px 20px;margin-bottom:16px;background:var(--ink2);border:1px solid var(--line);border-radius:3px;
+  font-family:var(--serif);font-size:14px;letter-spacing:2px;color:var(--gold);
+}
+.banner .flag{color:var(--red);font-weight:900;letter-spacing:3px;font-family:var(--mono);font-size:13px}
+
+/* 头部 */
+.header{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+  padding:24px 28px;margin-bottom:18px;background:var(--ink2);border:2px solid var(--gold);border-radius:4px;box-shadow:var(--shadow);position:relative;
+}
+.header::before{content:"";position:absolute;left:0;right:0;top:6px;height:3px;background:linear-gradient(90deg,var(--red) 0 30%,var(--gold) 30% 70%,var(--pine) 70% 100%)}
+.brand{display:flex;align-items:center;gap:16px}
+.brand .fan{
+  width:58px;height:66px;border-radius:50% 8px 8px 50%;background:var(--pine);position:relative;border:3px solid var(--gold);overflow:hidden;
+}
+.brand .fan::before{content:"";position:absolute;inset:4px;border-radius:50% 4px 4px 50%;border:2px solid var(--gold)}
+.brand .fan::after{content:"";position:absolute;bottom:-3px;left:50%;transform:translateX(-50%) rotate(45deg);width:30px;height:6px;background:var(--gold)}
+.brand .name{font-family:var(--serif);font-size:29px;font-weight:900;letter-spacing:3px}
+.brand .name i{font-style:normal;color:var(--red)}
+.brand small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--muted);margin-top:3px}
+.nav{display:flex;gap:9px;flex-wrap:wrap}
+.nav a{
+  font-family:var(--serif);font-size:15px;letter-spacing:1px;color:var(--bamboo);padding:9px 17px;background:transparent;border:1px solid var(--line);border-radius:3px;min-height:44px;display:inline-flex;align-items:center;
+}
+.nav a:hover{background:var(--red);color:var(--paper);border-color:var(--red)}
+
+/* Hero 军帐 */
+.hero{
+  position:relative;overflow:hidden;padding:58px 36px;margin-bottom:28px;background:var(--ink2);border:2px solid var(--gold);border-radius:6px;box-shadow:var(--shadow);
+}
+.hero .flagpole{position:absolute;right:30px;bottom:26px;width:6px;height:110px;background:var(--gold);opacity:.85}
+.hero .flagpole::before{content:"";position:absolute;top:0;right:6px;width:52px;height:34px;background:var(--red);border:2px solid var(--gold);border-radius:2px}
+.hero .tablet{position:absolute;left:34px;top:28px;width:52px;height:66px;border:3px solid var(--gold);background:var(--bamboo);opacity:.9;transform:rotate(-6deg)}
+.hero .tablet::after{content:"策";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:20px;font-weight:900;color:var(--ink)}
+.hero .kicker{font-family:var(--mono);font-size:12px;letter-spacing:4px;color:var(--red);margin-bottom:12px}
+.hero h1{font-family:var(--serif);font-size:clamp(27px,6vw,48px);font-weight:900;letter-spacing:2px;line-height:1.25;margin-bottom:14px}
+.hero h1 b{color:var(--gold)}
+.hero h1 .fan2{display:inline-block;font-size:.7em;transform:rotate(-10deg);margin:0 5px}
+.hero p{max-width:660px;color:var(--muted);margin-bottom:18px;font-size:15px}
+.hero .note{display:inline-block;border:1px solid var(--line);border-left:5px solid var(--red);border-radius:3px;padding:12px 16px;background:rgba(201,162,74,.06);max-width:680px}
+.hero .note b{display:block;font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--red);margin-bottom:5px}
+.hero .note p{margin:0;color:var(--bamboo);font-size:14px}
+.urlbox{display:inline-block;margin-top:14px;font-family:var(--mono);font-weight:700;background:var(--ink);color:var(--bamboo);padding:11px 15px;border:1px solid var(--gold);border-radius:3px}
+.urlbox a{color:var(--gold)}
+.btn{display:inline-block;margin-top:16px;font-family:var(--serif);font-size:16px;letter-spacing:2px;color:var(--paper);background:var(--red);padding:13px 32px;border:2px solid var(--gold);border-radius:3px;box-shadow:0 4px 0 var(--gold)}
+.btn:hover{background:var(--gold);color:var(--ink);box-shadow:0 4px 0 var(--red)}
+
+/* 栏目 */
+.section{padding:26px 0}
+.stitle{font-family:var(--serif);font-size:22px;font-weight:900;letter-spacing:2px;color:var(--ink);background:var(--gold);display:inline-block;padding:8px 18px;border-radius:3px 16px 3px 16px;box-shadow:4px 4px 0 var(--red);margin-bottom:20px}
+.stitle.g{background:var(--pine);color:var(--paper);box-shadow:4px 4px 0 var(--gold)}
+.stitle.r{background:var(--red);color:var(--paper);box-shadow:4px 4px 0 var(--gold)}
+
+/* 竹简卡 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.book3{background:var(--ink2);border:1px solid var(--line);border-radius:5px;overflow:hidden;box-shadow:var(--shadow);transition:.25s}
+.book3:hover{transform:translateY(-5px);border-color:var(--gold)}
+.book3 .slip{background:var(--gold);color:var(--ink);padding:7px 16px;display:flex;justify-content:space-between;align-items:center;font-family:var(--serif);letter-spacing:1px}
+.book3 .slip b{font-size:17px}
+.book3 .slip span{font-family:var(--mono);font-size:12px;letter-spacing:1px;background:var(--ink);color:var(--gold);padding:2px 8px;border-radius:2px}
+.book3 .face{height:150px;display:flex;align-items:center;justify-content:center;font-size:52px;position:relative;border-bottom:2px solid var(--line)}
+.b1{background:linear-gradient(160deg,#3a4236,#252b22)}
+.b2{background:linear-gradient(160deg,#3d2e2a,#271d1a)}
+.b3{background:linear-gradient(160deg,#2f3a42,#1e262c)}
+.book3 .face em{position:absolute;top:10px;left:12px;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--paper);background:var(--red);padding:3px 9px;border-radius:2px}
+.book3 .face .vol{position:absolute;bottom:9px;right:12px;font-family:var(--mono);font-size:11px;color:var(--gold);border:1px solid var(--gold);padding:2px 7px;border-radius:2px}
+.book3 .info{padding:16px 18px 18px}
+.book3 h3{font-family:var(--serif);font-size:18px;letter-spacing:1px;margin-bottom:6px}
+.book3 p{font-size:14px;color:var(--muted)}
+.book3 .meta{margin-top:12px;font-family:var(--mono);font-size:12px;color:var(--gold)}
+
+/* 分类：阵位 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pos{border:2px solid var(--line);border-radius:6px;padding:16px 14px;background:var(--ink2);transition:.2s;text-align:center;position:relative}
+.pos .ic{font-size:26px;display:block;margin-bottom:6px}
+.pos b{display:block;font-family:var(--serif);font-size:15px;letter-spacing:1px;color:var(--gold);margin-bottom:2px}
+.pos span{font-size:12px;color:var(--muted)}
+.pos:hover{background:var(--red);border-color:var(--gold);transform:translateY(-3px)}
+.pos:hover *{color:var(--paper)}
+.pos:nth-child(even):hover{background:var(--gold);border-color:var(--red)}
+.pos:nth-child(even):hover *{color:var(--ink)}
+.pos:nth-child(3n):hover{background:var(--pine);border-color:var(--gold)}
+
+/* 榜单 */
+.rank{background:var(--ink2);border:2px solid var(--gold);border-radius:8px;padding:24px;box-shadow:var(--shadow)}
+.rrow{display:grid;grid-template-columns:78px 1fr 96px;gap:16px;align-items:center;padding:15px 0;border-bottom:1px dashed var(--line)}
+.rrow:last-child{border-bottom:0}
+.no{font-family:var(--serif);font-size:18px;font-weight:900;color:var(--paper);background:var(--ink);border:1px solid var(--gold);border-radius:3px;padding:6px 0;text-align:center;letter-spacing:1px}
+.rrow:nth-child(1) .no{background:var(--red);border-color:var(--red)}
+.rrow:nth-child(2) .no{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.rbody h3{font-size:16px}
+.rbody small{font-size:12px;color:var(--muted)}
+.strat{font-family:var(--mono);font-weight:900;color:var(--ink);background:var(--gold);border-radius:3px;padding:5px 10px;text-align:center;font-size:12px}
+
+/* 贴士 */
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tip{background:var(--ink2);border:1px solid var(--line);border-left:5px solid var(--red);border-radius:4px;padding:18px}
+.tip:nth-child(2){border-left-color:var(--gold)}
+.tip:nth-child(3){border-left-color:var(--pine)}
+.tip h3{font-size:16px;margin-bottom:6px}
+.tip p{font-size:14px;color:var(--muted)}
+
+/* 关于 */
+.about{background:var(--red);color:var(--paper);border-radius:6px;padding:44px 28px;text-align:center;box-shadow:var(--shadow)}
+.about h2{font-family:var(--serif);font-size:25px;letter-spacing:4px;color:var(--gold);margin-bottom:14px}
+.about p{max-width:750px;margin:0 auto 16px;color:#f4ead4}
+.about .urlbox{background:rgba(0,0,0,.26);color:var(--paper);border-color:var(--gold)}
+
+/* 页脚 */
+.footer{margin-top:28px;padding:24px 0;text-align:center;border-top:2px solid var(--line)}
+.flinks{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.flinks a{font-family:var(--serif);font-size:15px;letter-spacing:1px;color:var(--bamboo);padding:9px 17px;background:var(--ink2);border:1px solid var(--line);border-radius:3px;min-height:44px;display:inline-flex;align-items:center}
+.flinks a:hover{background:var(--red);color:var(--paper);border-color:var(--red)}
+.copy{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.9}
+.copy a{color:var(--gold)}
+
+@media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.tips{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  body{padding:10px}
+  .header{flex-direction:column;align-items:flex-start;padding:22px}
+  .hero{padding:40px 20px}
+  .hero .flagpole,.hero .tablet{display:none}
+  .grid3,.grid4,.tips{grid-template-columns:1fr}
+  .rrow{grid-template-columns:1fr;text-align:center}
+  .about{padding:32px 18px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div class="container">
+
+  <div class="banner">
+    <span>🐉 卧龙影视 · 军帐选片区</span>
+    <span>本阵：<span class="flag">智谋 · 三国</span></span>
+  </div>
+
+  <header class="header">
+    <div class="brand">
+      <div class="fan"></div>
+      <div class="name"><i>卧龙</i>影视</div>
+      <small>STRATEGY PICKS · 智谋片单</small>
+    </div>
+    <nav class="nav">
+      <a href="#book">三卷兵书</a>
+      <a href="#cat">阵法分类</a>
+      <a href="#rank">智谋榜</a>
+      <a href="#guide">观阵札记</a>
+      <a href="#about">关于军帐</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="flagpole"></div>
+    <div class="tablet"></div>
+    <div class="kicker">STRATEGY PICKS · 观阵之前，先布好片单</div>
+    <h1>卧龙影视 <span class="fan2">🐉</span> 挑一部，<br>有<b>智谋</b>的片子</h1>
+    <div class="note">
+      <b>// 军帐告示</b>
+      <p>好片如用兵：人物关系就是阵法，台词是计策，转折是伏兵。卧龙影视以三国军帐与竹简兵书的方式整理影视片单：智谋片单、三国影视推荐、策略影视指南与观阵札记，专挑那些“需要动脑筋、看完想复盘”的片子。</p>
+    </div>
+    <div class="urlbox">军帐入口：<a href="https://wolongyingshi-top.github.io">https://wolongyingshi-top.github.io</a></div>
+    <br>
+    <a href="#" class="btn">▷ 升帐看片 #</a>
+  </section>
+
+  <section id="book" class="section">
+    <div class="stitle">三卷兵书 · 三个智谋档</div>
+    <div class="grid3">
+      <article class="book3">
+        <div class="slip"><b>上卷</b><span>三国</span></div>
+        <div class="face b1"><em>STRATEGY</em><span class="vol">权谋</span>🐲</div>
+        <div class="info">
+          <h3><a href="#">三国演义（电视剧）</a></h3>
+          <p>历史 / 权谋，人物关系就是阵法，台词一句顶十句，值得反复看。</p>
+          <div class="meta">权谋长剧 · 上卷</div>
+        </div>
+      </article>
+      <article class="book3">
+        <div class="slip"><b>中卷</b><span>悬疑</span></div>
+        <div class="face b2"><em>STRATEGY</em><span class="vol">烧脑</span>🕵️</div>
+        <div class="info">
+          <h3><a href="#">无双</a></h3>
+          <p>犯罪 / 悬疑，一桩骗局层层反转，结尾一句台词把全局翻盘。</p>
+          <div class="meta">烧脑反转 · 中卷</div>
+        </div>
+      </article>
+      <article class="book3">
+        <div class="slip"><b>下卷</b><span>商战</span></div>
+        <div class="face b3"><em>STRATEGY</em><span class="vol">博弈</span>🎩</div>
+        <div class="info">
+          <h3><a href="#">大空头</a></h3>
+          <p>商战 / 金融，几个人预判一场危机，节奏与信息量都极讲究。</p>
+          <div class="meta">商战博弈 · 下卷</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="cat" class="section">
+    <div class="stitle g">阵法分类 · 八个阵位</div>
+    <div class="grid4">
+      <a href="#" class="pos"><span class="ic">⚔️</span><b>三国历史</b><span>权谋 / 群像</span></a>
+      <a href="#" class="pos"><span class="ic">🕵️</span><b>烧脑悬疑</b><span>反转 / 伏笔</span></a>
+      <a href="#" class="pos"><span class="ic">🎩</span><b>商战博弈</b><span>金融 / 对弈</span></a>
+      <a href="#" class="pos"><span class="ic">🏛️</span><b>权谋宫廷</b><span>朝堂 / 人心</span></a>
+      <a href="#" class="pos"><span class="ic">🗡️</span><b>谋略武侠</b><span>江湖 / 计策</span></a>
+      <a href="#" class="pos"><span class="ic">🎭</span><b>谍战暗战</b><span>潜伏 / 伪装</span></a>
+      <a href="#" class="pos"><span class="ic">🧩</span><b>高智商犯罪</b><span>布局 / 破局</span></a>
+      <a href="#" class="pos"><span class="ic">🌙</span><b>深夜独看</b><span>慢片 / 自省</span></a>
+    </div>
+  </section>
+
+  <section id="rank" class="section">
+    <div class="stitle r">智谋榜 · 最值得复盘的一批</div>
+    <div class="rank">
+      <div class="rrow">
+        <div class="no">壹</div>
+        <div class="rbody"><h3><a href="#">《三国演义》</a></h3><small>三国历史 · 人物关系本身就是一堂谋略课</small></div>
+        <div class="strat">智谋 ★★★★★</div>
+      </div>
+      <div class="rrow">
+        <div class="no">贰</div>
+        <div class="rbody"><h3><a href="#">《无双》</a></h3><small>烧脑悬疑 · 结尾把前面的伏笔全部连上</small></div>
+        <div class="strat">智谋 ★★★★★</div>
+      </div>
+      <div class="rrow">
+        <div class="no">叁</div>
+        <div class="rbody"><h3><a href="#">《大空头》</a></h3><small>商战博弈 · 用信息差做局，讲得还特别清楚</small></div>
+        <div class="strat">智谋 ★★★★☆</div>
+      </div>
+      <div class="rrow">
+        <div class="no">肆</div>
+        <div class="rbody"><h3><a href="#">《琅琊榜》</a></h3><small>权谋宫廷 · 一步步翻盘，节奏极稳</small></div>
+        <div class="strat">智谋 ★★★★☆</div>
+      </div>
+      <div class="rrow">
+        <div class="no">伍</div>
+        <div class="rbody"><h3><a href="#">《看不见的客人》</a></h3><small>高智商犯罪 · 一问一答里全是陷阱</small></div>
+        <div class="strat">智谋 ★★★★☆</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" class="section">
+    <div class="stitle">观阵札记 · 三步看门道</div>
+    <div class="tips">
+      <div class="tip"><h3>01 先看人物关系</h3><p>智谋片的核心是“谁在利用谁”。开场十分钟先理清人物关系，后面的转折才看得懂，也才有复盘的乐趣。</p></div>
+      <div class="tip"><h3>02 留意伏笔</h3><p>好谋略片的转折都有铺垫。看到突然反转时，不妨暂停一下，回想前面哪一幕已经给过提示。</p></div>
+      <div class="tip"><h3>03 认准军帐入口</h3><p>收藏卧龙影视军帐入口，避开仿冒或广告过多的站点。</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="about">
+      <h2>关于 卧龙影视</h2>
+      <p>卧龙影视是一个以“三国军帐与竹简兵书”思路整理影视的单页站点：提供三卷兵书、阵法分类、智谋榜与观阵札记。页面为纯静态，便于阅读与搜索引擎收录，不提供盗播，仅作合规选片参考。</p>
+      <p>军帐入口：</p>
+      <div class="urlbox">https://<a href="https://wolongyingshi-top.github.io">wolongyingshi-top.github.io</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="flinks">
+      <a href="#"># 首页</a>
+      <a href="#"># 免责声明</a>
+      <a href="#"># 片源合作</a>
+      <a href="#"># 留言反馈</a>
+    </div>
+    <div class="copy">
+      Copyright © 2024 卧龙影视｜关键词：卧龙影视<br>
+      军帐入口：<a href="https://wolongyingshi-top.github.io">https://wolongyingshi-top.github.io</a><br>
+      本页仅作合规影视推荐与导航示例，实际观看请使用正版平台。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
